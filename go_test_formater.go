@@ -18,12 +18,12 @@ func HeaderTestCase(id TestNum, comment string, input any) {
 
 // Возвращает форатированную строку положительного результата.
 func StrCorrect(value any) string {
-	return fmt.Sprintf("\033[32m\t\t\t\t%s\tGot correct: %v\033[0m", success, value)
+	return fmt.Sprintf("\033[32m\t\t\t%s  Got correct: %v\033[0m", success, value)
 }
 
 // Возвращает форматированную строку отрицательного результата.
 func StrWrong(value any) string {
-	return fmt.Sprintf("\033[31m\t\t\t\t%s\tGot wrong: %v\033[0m", failed, value)
+	return fmt.Sprintf("\033[31m\t\t\t%s  Got wrong: %v\033[0m", failed, value)
 }
 
 // Выводит результат в форматированном виде.
