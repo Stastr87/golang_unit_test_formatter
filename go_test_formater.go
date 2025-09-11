@@ -13,7 +13,7 @@ const (
 
 // Выводит форматированный заголовок теста.
 func HeaderTestCase(id TestNum, comment string, input any) {
-	fmt.Printf("\t Test %d:\t%s %v", id, comment, input)
+	fmt.Printf("\t Test %d:\t%s %v\n", id, comment, input)
 }
 
 // Возвращает форатированную строку положительного результата.
@@ -29,10 +29,10 @@ func StrWrong(value any) string {
 // Выводит результат в форматированном виде.
 func ShowResult(result any, ok bool) {
 	if ok {
-		fmt.Printf("%s", StrCorrect(result))
+		fmt.Printf("%s\n", StrCorrect(result))
 	}
 	if !ok {
 
-		fmt.Printf("%s", StrWrong(result))
+		fmt.Printf("%s\n", StrWrong(result))
 	}
 }
