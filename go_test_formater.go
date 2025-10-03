@@ -13,7 +13,12 @@ const (
 
 // Выводит форматированный заголовок теста.
 func HeaderTestCase(id TestNum, comment string, input any) {
-	fmt.Printf("\t Test %d:\t%s %v\n", id, comment, input)
+	if input != nil {
+		fmt.Printf("\t Test %d:\t%s %v\n", id, comment, input)
+	}
+	if input == nil {
+		fmt.Printf("\t Test %d:\t%s", id, comment)
+	}
 }
 
 // Возвращает форатированную строку положительного результата.
