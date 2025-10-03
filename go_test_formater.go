@@ -17,7 +17,7 @@ func HeaderTestCase(id TestNum, comment string, input any) {
 		fmt.Printf("\t Test %d:\t%s %v\n", id, comment, input)
 	}
 	if input == nil {
-		fmt.Printf("\t Test %d:\t%s", id, comment)
+		fmt.Printf("\t Test %d:\t%s\n", id, comment)
 	}
 }
 
